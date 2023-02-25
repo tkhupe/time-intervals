@@ -6,7 +6,7 @@ var message =
 var words = message.split(' ');
 
 function countdown() {
-  var timeLeft = 5;
+  var timeLeft = 6;
 
   // TODO: Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
   var timeInterval = setInterval(function () {  
@@ -17,11 +17,12 @@ function countdown() {
 //     for (let i = 0; i < message.length; i++) {
 // timerEl.words.displayMessage()
       timeLeft--;
-      timerEl.textContent = timeLeft;
+      timerEl.textContent = timeLeft + " seconds remaining";
 
       if(timeLeft === 0) {
         clearInterval(timeInterval);
         displayMessage();
+        timeLeft.setAttribute("style", "display: none");
       }
 
 
